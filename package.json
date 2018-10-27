@@ -1,7 +1,7 @@
 {
-  "name": "@writetome51/array-remove-item",
-  "version": "1.0.1",
-  "description": "Removes single item from array, identified by a passed index",
+  "name": "@writetome51/array-remove-items",
+  "version": "1.0.0",
+  "description": "Removes items from array, identified by their indexes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,13 +9,15 @@
   "keywords": [
     "array",
     "remove",
-    "item",
+    "items",
     "manipulation"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "@writetome51/array-get-and-remove-item": "latest"
+    "basic-data-handling": "latest",
+    "@writetome51/array-remove-item": "latest",
+    "@writetome51/array-get-copy": "latest"
   }
 }

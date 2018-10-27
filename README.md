@@ -1,9 +1,5 @@
-Removes single item from array, identified by a passed index.
+Removes items from array, identified by their indexes.  The indexes cannot be negative.
 
-let arr = [1,2,3,4,5,6];
+let arr = [10,20,30,40,50,60];
 
-removeItem(2, arr); //  arr now contains [1,2,4,5,6]
-
-You can also use a negative index:
-
-removeItem(-2, arr); // arr now contains [1,2,4,6]
+removeItems([1, 3], arr); //  arr now contains [10, 30, 50, 60]

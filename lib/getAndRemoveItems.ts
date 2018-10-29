@@ -10,10 +10,7 @@ import { errorIfNotIntegerZeroOrGreater } from 'basic-data-handling/errorIfNotIn
 // indexes cannot be negative.  If there are any duplicates in indexes, they're ignored.
 
 export function getAndRemoveItems(indexes: number[], array): any[] {
-	let indxs = getCopy(indexes); // make copy to preserve original.
-
-	indxs = getInAscendingOrder(indxs).reverse(); // algorithm only works if they're in descending order.
-	removeDuplicates(indxs); // Just in case the coder gets sloppy.
+	let indxs = getProperlyOrderedIndexesWithoutDuplicates(indexes);
 	let removedItems = [];
 
 	while (notEmpty(indxs)) {
@@ -21,6 +18,14 @@ export function getAndRemoveItems(indexes: number[], array): any[] {
 		removeItem(0, indxs);
 	}
 	return removedItems;
+
+
+	function getProperlyOrderedIndexesWithoutDuplicates(indexes) {
+		let indxs = getCopy(indexes); // make copy to preserve original.
+		indxs = getInAscendingOrder(indxs).reverse(); // algorithm only works if they're in descending order.
+		removeDuplicates(indxs); // Just in case the coder gets sloppy.
+		return indxs;
+	}
 
 
 	function removeItem_and_addToRemovedItems(index) {

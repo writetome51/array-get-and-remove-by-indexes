@@ -1,7 +1,7 @@
 {
-  "name": "@writetome51/array-remove-items",
+  "name": "@writetome51/array-get-and-remove-items",
   "version": "1.0.0",
-  "description": "Removes items from array, identified by their indexes",
+  "description": "Removes and returns items from array, identified by their indexes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,8 @@
     "array",
     "remove",
     "items",
+    "item",
+    "indexes",
     "manipulation"
   ],
   "author": "Steve Thompson",
@@ -23,6 +25,7 @@
     "@writetome51/array-get-copy": "latest",
     "@writetome51/get-in-ascending-order": "latest",
     "@writetome51/array-remove-duplicates": "latest",
+    "@writetome51/set-array": "latest",
     "basic-data-handling": "latest"
   }
 }

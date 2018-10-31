@@ -9,10 +9,9 @@ import { notInteger } from 'basic-data-handling/isInteger_isFloat';
 import { setArray } from '@writetome51/set-array';
 
 
+// indexes can be negative or positive.
 // If there are any duplicates in indexes, they're ignored.
-// The returned items are not in same order that indexes are listed.  First, any negative indexes are 
-// converted to their positive equivalents (i.e, -1 becomes array.length - 1).  Then all the indexes are 
-// placed in descending order.  So the returned items are in order of highest index to lowest.
+// The items are returned in ascending index-order: i.e, item with index 0 appears first.
 
 export function getAndRemoveItems(indexes: number[], array): any[] {
 	let indxs = getCopy(indexes); // make copy to preserve original.
@@ -28,19 +27,14 @@ export function getAndRemoveItems(indexes: number[], array): any[] {
 	}
 
 
-	function placeInDescendingOrder(numbers) {
-		let ordered = getInAscendingOrder(numbers).reverse();
-		setArray(numbers, ordered);
-	}
-
-
 	function _getAndRemoveItems(indexes, array) {
 		let removedItems = [];
 		while (notEmpty(indexes)) {
 			removeItem_and_addToRemovedItems(indexes[0]);
 			removeItem(0, indexes);
 		}
-		return removedItems;
+		// Return all items in ascending index-order:
+		return removedItems.reverse();
 
 
 		function removeItem_and_addToRemovedItems(index) {
@@ -56,6 +50,12 @@ export function getAndRemoveItems(indexes: number[], array): any[] {
 			if (indexes[i] < 0) indexes[i] = array.length + indexes[i];
 			errorIfNotIntegerZeroOrGreater(indexes[i]);
 		}
+	}
+
+
+	function placeInDescendingOrder(indexes) {
+		let ordered = getInAscendingOrder(indexes).reverse();
+		setArray(indexes, ordered);
 	}
 
 

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
- "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/writetome51/array-get-and-remove-items.git"
   },
@@ -20,7 +20,7 @@
   ],
   "author": "Steve Thompson",
   "license": "MIT",
- "bugs": {
+  "bugs": {
     "url": "https://github.com/writetome51/array-get-and-remove-items/issues"
   },
   "homepage": "https://github.com/writetome51/array-get-and-remove-items#readme",
@@ -34,6 +34,7 @@
     "@writetome51/get-in-ascending-order": "latest",
     "@writetome51/array-remove-duplicates": "latest",
     "@writetome51/set-array": "latest",
+    "@writetome51/array-and-index-validation": "latest",
     "basic-data-handling": "latest"
   }
 }

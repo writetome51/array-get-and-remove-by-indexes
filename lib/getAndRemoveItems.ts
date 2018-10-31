@@ -4,9 +4,8 @@ import { getCopy } from '@writetome51/array-get-copy/getCopy';
 import { getInAscendingOrder } from '@writetome51/get-in-ascending-order';
 import { removeDuplicates } from '@writetome51/array-remove-duplicates/removeDuplicates';
 import { notEmpty } from 'basic-data-handling/isEmpty_notEmpty';
-import { errorIfNotIntegerZeroOrGreater } from 'basic-data-handling/errorIfNotIntegerZeroOrGreater';
-import { notInteger } from 'basic-data-handling/isInteger_isFloat';
 import { setArray } from '@writetome51/set-array';
+import { errorIfIndexNotValid } from '@writetome51/array-and-index-validation/errorIf/errorIfIndexNotValid';
 
 
 // indexes can be negative or positive.
@@ -46,9 +45,8 @@ export function getAndRemoveItems(indexes: number[], array): any[] {
 
 	function convertNegativeIndexesToPositives(indexes) {
 		for (let i = 0; i < indexes.length; ++i) {
-			if (notInteger(indexes[i])) throw new Error('The array contains a value that is not an integer');
+			errorIfIndexNotValid(indexes[i], array);
 			if (indexes[i] < 0) indexes[i] = array.length + indexes[i];
-			errorIfNotIntegerZeroOrGreater(indexes[i]);
 		}
 	}
 

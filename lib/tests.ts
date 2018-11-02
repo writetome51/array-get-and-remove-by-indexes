@@ -30,7 +30,7 @@ else console.log('test 2A FAILED');
 // Test 3: Make sure [-8, 1] removes first 2 items:
 arr = ['he', 'llo', 'zz', 'gg', 'cc', 'aa', 'hh', 'oo'];
 removed = getAndRemoveByIndexes([-8, 1], arr);
-if (arraysMatch(arr, [ 'zz', 'gg', 'cc', 'aa', 'hh', 'oo'])) console.log('test 3 passed');
+if (arraysMatch(arr, ['zz', 'gg', 'cc', 'aa', 'hh', 'oo'])) console.log('test 3 passed');
 else console.log('test 3 FAILED');
 
 
@@ -38,6 +38,17 @@ else console.log('test 3 FAILED');
 if (arraysMatch(removed, ['he', 'llo'])) console.log('test 3A passed');
 else console.log('test 3A FAILED');
 
+
+// Test 3B: Make sure [-2, 2] removes the correct items:
+arr = ['he', 'llo', 'zz', 'gg', 'cc', 'aa', 'hh', 'oo'];
+removed = getAndRemoveByIndexes([-2, 2], arr);
+if (arraysMatch(arr, ['he', 'llo', 'gg', 'cc', 'aa', 'oo'])) console.log('test 3B passed');
+else console.log('test 3B FAILED');
+
+
+// Test 3C: Make sure the correct items were returned:
+if (arraysMatch(removed, ['zz', 'hh'])) console.log('test 3C passed');
+else console.log('test 3C FAILED');
 
 
 // Test 4: Make sure -7 triggers error:

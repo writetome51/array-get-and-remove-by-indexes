@@ -1,8 +1,8 @@
 import { getAndRemoveByIndex } from '@writetome51/array-get-and-remove-by-index';
 import { removeByIndex } from '@writetome51/array-remove-by-index';
-import { getCopy } from '@writetome51/array-get-copy/getCopy';
+import { getCopy } from '@writetome51/array-get-copy';
 import { getInAscendingOrder } from '@writetome51/get-in-ascending-order';
-import { removeDuplicates } from '@writetome51/array-remove-duplicates/removeDuplicates';
+import { removeDuplicates } from '@writetome51/array-remove-duplicates';
 import { notEmpty } from 'basic-data-handling/isEmpty_notEmpty';
 import { setArray } from '@writetome51/set-array';
 import { errorIfIndexNotValid } from '@writetome51/array-and-index-validation/errorIf/errorIfIndexNotValid';
@@ -15,7 +15,9 @@ import { errorIfIndexNotValid } from '@writetome51/array-and-index-validation/er
 export function getAndRemoveByIndexes(indexes: number[], array): any[] {
 	let indxs = getCopy(indexes); // make copy to preserve original.
 	convertToPositives_placeInOrder_andRemoveDuplicates(indxs);
-	return _getAndRemoveByIndexes(indxs, array);
+	let removedItems = _getAndRemoveByIndexes(indxs, array);
+	// Return all items in ascending index-order:
+	return removedItems.reverse();
 
 
 	function convertToPositives_placeInOrder_andRemoveDuplicates(indexes) {
@@ -32,8 +34,7 @@ export function getAndRemoveByIndexes(indexes: number[], array): any[] {
 			removeItem_and_addToRemovedItems(indexes[0]);
 			removeByIndex(0, indexes);
 		}
-		// Return all items in ascending index-order:
-		return removedItems.reverse();
+		return removedItems;
 
 
 		function removeItem_and_addToRemovedItems(index) {

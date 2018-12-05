@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-get-and-remove-by-indexes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Removes and returns items from array, identified by their indexes",
   "main": "index.js",
   "scripts": {
@@ -25,16 +25,16 @@
   },
   "homepage": "https://github.com/writetome51/array-get-and-remove-by-indexes#readme",
   "devDependencies": {
-    "@writetome51/arrays-match": "latest"
+    "@writetome51/arrays-match": "~1.0.4"
   },
   "dependencies": {
-    "@writetome51/array-get-and-remove-by-index": "latest",
-    "@writetome51/array-remove-by-index": "latest",
-    "@writetome51/array-get-copy": "latest",
-    "@writetome51/get-in-ascending-order": "latest",
-    "@writetome51/array-remove-duplicates": "latest",
-    "@writetome51/set-array": "latest",
-    "@writetome51/array-and-index-validation": "latest",
-    "basic-data-handling": "latest"
+    "@writetome51/array-get-and-remove-by-index": "~1.0.2",
+    "@writetome51/array-remove-by-index": "~1.0.0",
+    "@writetome51/array-get-copy": "~1.1.0",
+    "@writetome51/get-in-ascending-order": "~1.0.4",
+    "@writetome51/array-remove-duplicates": "~1.1.1",
+    "@writetome51/set-array": "~1.0.1",
+    "@writetome51/array-and-index-validation": "~1.0.3",
+    "basic-data-handling": "~1.0.13"
   }
 }

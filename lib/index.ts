@@ -1,11 +1,11 @@
+import { notEmpty } from 'basic-data-handling/isEmpty_notEmpty';
+import { getCopy } from '@writetome51/array-get-copy';
 import { getAndRemoveByIndex } from '@writetome51/array-get-and-remove-by-index';
 import { removeByIndex } from '@writetome51/array-remove-by-index';
-import { getCopy } from '@writetome51/array-get-copy';
-import { getInAscendingOrder } from '@writetome51/get-in-ascending-order';
 import { removeDuplicates } from '@writetome51/array-remove-duplicates';
-import { notEmpty } from 'basic-data-handling/isEmpty_notEmpty';
-import { setArray } from '@writetome51/set-array';
 import { errorIfIndexNotValid } from '@writetome51/array-and-index-validation/errorIf/errorIfIndexNotValid';
+import { getInAscendingOrder } from '@writetome51/get-in-ascending-order';
+import { setArray } from '@writetome51/set-array';
 
 
 // indexes can be negative or positive.

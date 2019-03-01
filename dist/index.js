@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var isEmpty_notEmpty_1 = require("basic-data-handling/isEmpty_notEmpty");
+var array_get_copy_1 = require("@writetome51/array-get-copy");
 var array_get_and_remove_by_index_1 = require("@writetome51/array-get-and-remove-by-index");
 var array_remove_by_index_1 = require("@writetome51/array-remove-by-index");
-var array_get_copy_1 = require("@writetome51/array-get-copy");
-var get_in_ascending_order_1 = require("@writetome51/get-in-ascending-order");
 var array_remove_duplicates_1 = require("@writetome51/array-remove-duplicates");
-var isEmpty_notEmpty_1 = require("basic-data-handling/isEmpty_notEmpty");
-var set_array_1 = require("@writetome51/set-array");
 var errorIfIndexNotValid_1 = require("@writetome51/array-and-index-validation/errorIf/errorIfIndexNotValid");
+var get_in_ascending_order_1 = require("@writetome51/get-in-ascending-order");
+var set_array_1 = require("@writetome51/set-array");
 // indexes can be negative or positive.
 // If there are any duplicates in indexes, they're ignored.
 // The items are returned in ascending index-order: i.e, item with index 0 appears first.

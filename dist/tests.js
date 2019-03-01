@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var getAndRemoveByIndexes_1 = require("./getAndRemoveByIndexes");
+var index_1 = require("./index");
 var arrays_match_1 = require("@writetome51/arrays-match");
 var arr = ['he', 'llo', 'bay', 'bayyyy'];
 // Test 1: Make sure 0 and 1 removes first 2 items:
-var removed = getAndRemoveByIndexes_1.getAndRemoveByIndexes([0, 1], arr);
+var removed = index_1.getAndRemoveByIndexes([0, 1], arr);
 if (arr[0] === 'bay')
     console.log('test 1 passed');
 else
@@ -16,7 +16,7 @@ else
     console.log('test 1A FAILED');
 // Test 2: Make sure 4 and 5 removes the last 2 items:
 arr = ['he', 'llo', 'zz', 'gg', 'cc', 'aa'];
-removed = getAndRemoveByIndexes_1.getAndRemoveByIndexes([4, 5], arr);
+removed = index_1.getAndRemoveByIndexes([4, 5], arr);
 if (arr.length === 4 && arr[3] === 'gg')
     console.log('test 2 passed');
 else
@@ -28,7 +28,7 @@ else
     console.log('test 2A FAILED');
 // Test 3: Make sure [-8, 1] removes first 2 items:
 arr = ['he', 'llo', 'zz', 'gg', 'cc', 'aa', 'hh', 'oo'];
-removed = getAndRemoveByIndexes_1.getAndRemoveByIndexes([-8, 1], arr);
+removed = index_1.getAndRemoveByIndexes([-8, 1], arr);
 if (arrays_match_1.arraysMatch(arr, ['zz', 'gg', 'cc', 'aa', 'hh', 'oo']))
     console.log('test 3 passed');
 else
@@ -40,7 +40,7 @@ else
     console.log('test 3A FAILED');
 // Test 3B: Make sure [-2, 2] removes the correct items:
 arr = ['he', 'llo', 'zz', 'gg', 'cc', 'aa', 'hh', 'oo'];
-removed = getAndRemoveByIndexes_1.getAndRemoveByIndexes([-2, 2], arr);
+removed = index_1.getAndRemoveByIndexes([-2, 2], arr);
 if (arrays_match_1.arraysMatch(arr, ['he', 'llo', 'gg', 'cc', 'aa', 'oo']))
     console.log('test 3B passed');
 else
@@ -54,7 +54,7 @@ else
 arr = ['he', 'llo', 'zz', 'gg', 'cc', 'aa'];
 var errorTriggered = false;
 try {
-    getAndRemoveByIndexes_1.getAndRemoveByIndexes([-7], arr);
+    index_1.getAndRemoveByIndexes([-7], arr);
 }
 catch (e) {
     errorTriggered = true;
@@ -67,7 +67,7 @@ else
 errorTriggered = false;
 arr = ['he', 'llo', 'zz', 'gg', 'cc', 'aa'];
 try {
-    var x = getAndRemoveByIndexes_1.getAndRemoveByIndexes([6], arr);
+    var x = index_1.getAndRemoveByIndexes([6], arr);
 }
 catch (e) {
     errorTriggered = true;
@@ -80,7 +80,7 @@ else
 errorTriggered = false;
 arr = ['he', 'llo', 'zz', 'gg', 'cc', 'aa'];
 try {
-    getAndRemoveByIndexes_1.getAndRemoveByIndexes('1', arr);
+    index_1.getAndRemoveByIndexes('1', arr);
 }
 catch (e) {
     errorTriggered = true;
@@ -92,7 +92,7 @@ else
 // Test 7: Make sure non-array as second arg triggers error:
 errorTriggered = false;
 try {
-    getAndRemoveByIndexes_1.getAndRemoveByIndexes(0, {});
+    index_1.getAndRemoveByIndexes(0, {});
 }
 catch (e) {
     errorTriggered = true;

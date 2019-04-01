@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var isEmpty_notEmpty_1 = require("basic-data-handling/isEmpty_notEmpty");
-var array_get_copy_1 = require("@writetome51/array-get-copy");
+var error_if_index_not_valid_1 = require("error-if-index-not-valid");
 var array_get_and_remove_by_index_1 = require("@writetome51/array-get-and-remove-by-index");
+var array_get_copy_1 = require("@writetome51/array-get-copy");
+var get_in_numeric_order_1 = require("@writetome51/get-in-numeric-order");
+var isEmpty_notEmpty_1 = require("basic-data-handling/isEmpty_notEmpty");
 var array_remove_by_index_1 = require("@writetome51/array-remove-by-index");
 var array_remove_duplicates_1 = require("@writetome51/array-remove-duplicates");
-var errorIfIndexNotValid_1 = require("@writetome51/array-and-index-validation/errorIf/errorIfIndexNotValid");
-var get_in_ascending_order_1 = require("@writetome51/get-in-ascending-order");
 var set_array_1 = require("@writetome51/set-array");
 // indexes can be negative or positive.
 // If there are any duplicates in indexes, they're ignored.
@@ -37,13 +37,13 @@ function getAndRemoveByIndexes(indexes, array) {
     }
     function convertNegativeIndexesToPositives(indexes) {
         for (var i = 0; i < indexes.length; ++i) {
-            errorIfIndexNotValid_1.errorIfIndexNotValid(indexes[i], array);
+            error_if_index_not_valid_1.errorIfIndexNotValid(indexes[i], array.length);
             if (indexes[i] < 0)
                 indexes[i] = array.length + indexes[i];
         }
     }
     function placeInDescendingOrder(indexes) {
-        var ordered = get_in_ascending_order_1.getInAscendingOrder(indexes).reverse();
+        var ordered = get_in_numeric_order_1.getInNumericOrder(indexes).reverse();
         set_array_1.setArray(indexes, ordered);
     }
 }

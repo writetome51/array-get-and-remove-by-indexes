@@ -1,11 +1,12 @@
-import { notEmpty } from 'basic-data-handling/isEmpty_notEmpty';
-import { getCopy } from '@writetome51/array-get-copy';
+import { errorIfIndexNotValid } from 'error-if-index-not-valid';
 import { getAndRemoveByIndex } from '@writetome51/array-get-and-remove-by-index';
+import { getCopy } from '@writetome51/array-get-copy';
+import { getInNumericOrder } from '@writetome51/get-in-numeric-order';
+import { notEmpty } from 'basic-data-handling/isEmpty_notEmpty';
 import { removeByIndex } from '@writetome51/array-remove-by-index';
 import { removeDuplicates } from '@writetome51/array-remove-duplicates';
-import { errorIfIndexNotValid } from '@writetome51/array-and-index-validation/errorIf/errorIfIndexNotValid';
-import { getInAscendingOrder } from '@writetome51/get-in-ascending-order';
 import { setArray } from '@writetome51/set-array';
+
 
 
 // indexes can be negative or positive.
@@ -46,14 +47,14 @@ export function getAndRemoveByIndexes(indexes: number[], array): any[] {
 
 	function convertNegativeIndexesToPositives(indexes) {
 		for (let i = 0; i < indexes.length; ++i) {
-			errorIfIndexNotValid(indexes[i], array);
+			errorIfIndexNotValid(indexes[i], array.length);
 			if (indexes[i] < 0) indexes[i] = array.length + indexes[i];
 		}
 	}
 
 
 	function placeInDescendingOrder(indexes) {
-		let ordered = getInAscendingOrder(indexes).reverse();
+		let ordered = getInNumericOrder(indexes).reverse();
 		setArray(indexes, ordered);
 	}
 

@@ -4,7 +4,7 @@ var error_if_index_not_valid_1 = require("error-if-index-not-valid");
 var array_get_and_remove_by_index_1 = require("@writetome51/array-get-and-remove-by-index");
 var array_get_copy_1 = require("@writetome51/array-get-copy");
 var get_in_numeric_order_1 = require("@writetome51/get-in-numeric-order");
-var isEmpty_notEmpty_1 = require("basic-data-handling/isEmpty_notEmpty");
+var is_empty_not_empty_1 = require("@writetome51/is-empty-not-empty");
 var array_remove_by_index_1 = require("@writetome51/array-remove-by-index");
 var array_remove_duplicates_1 = require("@writetome51/array-remove-duplicates");
 var set_array_1 = require("@writetome51/set-array");
@@ -25,7 +25,7 @@ function getAndRemoveByIndexes(indexes, array) {
     }
     function _getAndRemoveByIndexes(indexes, array) {
         var removedItems = [];
-        while (isEmpty_notEmpty_1.notEmpty(indexes)) {
+        while (is_empty_not_empty_1.notEmpty(indexes)) {
             removeItem_and_addToRemovedItems(indexes[0]);
             array_remove_by_index_1.removeByIndex(0, indexes);
         }

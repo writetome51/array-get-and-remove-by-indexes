@@ -1,6 +1,6 @@
-# getAndRemoveByIndexes(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;indexes,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<br>):  any[] 
+# getAndRemoveByIndexes(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;indexes: number[],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<br>):  any[] 
 
-Removes and returns items from `array`, identified by their `indexes`.   
+Removes and returns items, identified by their `indexes`,  from `array`.   
 `indexes` can be negative or positive.   
 Items are returned in ascending index-order: i.e, item with index 0 appears first.  
 
@@ -28,10 +28,7 @@ removed = getAndRemoveByIndexes([-2, -4, -6], arr);
 
 
 ## Loading
-```
-// if using Typescript:
-import {getAndRemoveByIndexes} from '@writetome51/array-get-and-remove-by-indexes';
-// if using ES5 Javascript:
-var getAndRemoveByIndexes = 
-    require('@writetome51/array-get-and-remove-by-indexes').getAndRemoveByIndexes;
+```js
+import {getAndRemoveByIndexes} 
+	from '@writetome51/array-get-and-remove-by-indexes';
 ```

@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-get-and-remove-by-indexes",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Removes and returns items from array, identified by their indexes",
   "type": "module",
   "main": "dist/index.js",

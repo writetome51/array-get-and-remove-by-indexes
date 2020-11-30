@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-get-and-remove-by-indexes",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Removes and returns items from array, identified by their indexes",
   "type": "module",
   "main": "dist/index.js",
@@ -30,7 +30,7 @@
     "@writetome51/arrays-match": ">=2.0.2"
   },
   "dependencies": {
-    "@arr/reverse": "^1.0.1",
+    "@writetome51/array-append-prepend": ">=3.0.0",
     "@writetome51/array-remove-by-indexes": ">=3.1.0"
   }
 }

@@ -1,5 +1,5 @@
 import { removeByIndexes } from '@writetome51/array-remove-by-indexes';
-import reverse from '@arr/reverse';
+import { prepend } from '@writetome51/array-append-prepend';
 
 
 // Negative indexes not allowed.
@@ -8,9 +8,8 @@ import reverse from '@arr/reverse';
 export function getAndRemoveByIndexes(indexes: number[], array): any[] {
 	let removedItems = [];
 
-	// Adds items to removedItems in descending index order:
-	removeByIndexes(indexes, array, (item) => removedItems.push(item));
+	// removes items in descending index order:
+	removeByIndexes(indexes, array, (item) => prepend(item, removedItems));
 	
-	// Return items in ascending index-order:
-	return reverse(removedItems);
+	return removedItems;
 }

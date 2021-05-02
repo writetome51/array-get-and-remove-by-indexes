@@ -1,4 +1,4 @@
-# getAndRemoveByIndexes(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;indexes: number[],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<br>):  any[] 
+# getAndRemoveByIndexes\<T\>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;indexes: number[],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array: T[]<br>): T[] 
 
 Removes and returns items, identified by their `indexes`,  from `array`.   
 Negative indexes not allowed.  

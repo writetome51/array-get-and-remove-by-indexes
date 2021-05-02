@@ -1,4 +1,2 @@
-lib/
 .idea/
-dist/tests.js
-tsconfig.json
+tests.js

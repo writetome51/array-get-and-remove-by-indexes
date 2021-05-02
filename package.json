@@ -1,10 +1,10 @@
 {
   "name": "@writetome51/array-get-and-remove-by-indexes",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "Removes and returns items from array, identified by their indexes",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "tsc"
   },
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/writetome51/array-get-and-remove-by-indexes#readme",
   "devDependencies": {
-    "@writetome51/arrays-match": ">=2.0.2"
+    "@writetome51/is-match": "^0.0.1"
   },
   "dependencies": {
     "@writetome51/array-append-prepend": ">=3.0.0",
